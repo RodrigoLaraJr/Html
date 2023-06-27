@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+	
+<head>
+<meta charset="utf-8" />
+
+<title> Pagina Web</title>
+
+</head>
+<body onload="darkMode()">
+
+		<button class="button-1" onclick="darkMode()">Dark Mode</button>
+	<button class="button-1" onclick="lightMode()">Light Mode</button>
+	<center>
+		<!-- <fieldset class="minhaDiv" style="margin-top: 50px; width: 40px;"> -->
+		<div class="module-border-wrap" style="margin-top: 100px;">
+			<div id ="divform" class="module">
+				<legend style="text-align: center;"> Cadastro de Funcionário</legend>
+				<fieldset>
+          <legend>Detalhes Pessoais</legend>  
+          <div class="row" style="text-align: left;">         
+             Nome : <input type="text" class="form__field" placeholder="Nome Inteiro">       
+          </div>
+          <div class="row" style="text-align: left;">        
+            Sobrenome : <input type="text" class="form__field" placeholder="Sobrenome">       
+          </div>
+          <div class="row" style="text-align: left;">
+            Data de nascimento <input type="date" id="start" name="trip-start"
+       value="2018-07-22"
+       min="2018-01-01" max="2018-12-31" style="background-color:#040d16 ; color:#ffffff;">
+          </div>
+      </fieldset>
+      <fieldset>
+        <legend>Detalhes Profissionais</legend>
+        <div class="row" style="text-align: left;">
+          <label for="uf">Departamento:</label>
+                        <select name="uf" id="uf" required>
+                            <option value="SP">TI</option>
+                            <option value="RJ">Contabil</option>
+                            <option value="SC">Fiscal</option>
+                            <option value="Outros">Legal</option>
+                        </select>
+        </div>
+        <div class="row" style="text-align: left;">
+          Código Funcionário: <input type="nuber"  style="background-color:#040d16 ; color:#ffffff ;">
+        </div>
+      </fieldset>
+      <br/>
+      <div class="row" style="text-align: right;">
+<button type="button" class="button-30" onclick="enviar();">Incluir funcionário</button>
+      </div>
+			</div>
+		</div>
+		<!-- </fieldset> -->
+	</center>
+</body>
+<script type="text/javascript">
+	
+	function darkMode() {
+	  var element = document.body;
+	  var content = document.getElementById("DarkModetext");
+	  element.className = "dark-mode";
+	  content.innerText = "Dark Mode is ON";
+	  document.getElementById("divform").classList.remove = "module2";
+	   document.getElementById("divform").classList.remove = "module";
+	};
+	 function lightMode() {
+	   var element = document.body;
+	   var content = document.getElementById("DarkModetext");
+	   element.className = "light-mode";
+	   content.innerText = "Dark Mode is OFF";
+	   document.getElementById("divform").classList.remove = "module";
+	   document.getElementById("divform").classList.remove = "module2";
+	 };
+	 function enviar(){
+		
+    alert("funcionário cadastrado!!");
+        window.location.reload();
+
+		
+	 };
+    
+  </script>
